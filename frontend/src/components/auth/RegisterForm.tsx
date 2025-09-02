@@ -29,7 +29,6 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleMode }) => {
       setError('Email already exists');
     }
   };
-
   return (
     <Card className="w-full max-w-md">
       <CardHeader>

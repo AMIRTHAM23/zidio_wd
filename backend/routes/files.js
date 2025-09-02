@@ -9,10 +9,6 @@ const { protect, ownerOrAdmin } = require('../middleware/auth');
 const { upload, handleMulterError } = require('../middleware/upload');
 
 const router = express.Router();
-
-// @desc    Upload Excel files
-// @route   POST /api/files/upload
-// @access  Private
 router.post('/upload', protect, upload.array('files', 5), handleMulterError, async (req, res) => {
   try {
     if (!req.files || req.files.length === 0) {
